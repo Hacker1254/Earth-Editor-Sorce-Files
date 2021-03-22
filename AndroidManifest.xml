@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="jp.danball.eartheditor" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <meta-data android:name="android.support.VERSION" android:value="26.0.0-alpha1"/>
+    <application android:allowBackup="true" android:icon="@drawable/icon" android:label="@string/app_name" android:largeHeap="true" android:launchMode="singleTask" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        <meta-data android:name="APP_ID" android:value="20"/>
+        <meta-data android:name="AMAZON" android:value="false"/>
+        <meta-data android:name="UID_TYPE" android:value="1"/>
+        <meta-data android:name="WR_COMMON" android:value="true"/>
+        <meta-data android:name="APP_SLEEP_DISABLE" android:value="true"/>
+        <meta-data android:name="orientation_sensor" android:value="true"/>
+        <meta-data android:name="gl_ox" android:value="0"/>
+        <meta-data android:name="gl_oy" android:value="0"/>
+        <meta-data android:name="gl_width_min" android:value="480"/>
+        <meta-data android:name="gl_width_max" android:value="640"/>
+        <meta-data android:name="gl_height_min" android:value="320"/>
+        <meta-data android:name="gl_height_max" android:value="384"/>
+        <meta-data android:name="gl_width_min_tablet" android:value="0"/>
+        <meta-data android:name="gl_width_max_tablet" android:value="0"/>
+        <meta-data android:name="gl_height_min_tablet" android:value="0"/>
+        <meta-data android:name="gl_height_max_tablet" android:value="0"/>
+        <meta-data android:name="gl_frameskip" android:value="true"/>
+        <meta-data android:name="gl_scale_3x" android:value="false"/>
+        <meta-data android:name="gl_scale_4x" android:value="false"/>
+        <meta-data android:name="gl_fbuf_device" android:value="false"/>
+        <meta-data android:name="gl_depth" android:value="false"/>
+        <meta-data android:name="sensor_accele" android:value="false"/>
+        <meta-data android:name="admob_banner_phone" android:value="ca-app-pub-1932062691308093/4956296077"/>
+        <meta-data android:name="admob_banner_tablet" android:value="ca-app-pub-1932062691308093/6433029270"/>
+        <meta-data android:name="admob_rectangle" android:value="ca-app-pub-1932062691308093/7909762475"/>
+        <meta-data android:name="admob_interstitial" android:value="ca-app-pub-1932062691308093/9386495674"/>
+        <provider android:authorities="jp.danball.eartheditor.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
+        </provider>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="jp.danball.eartheditor.MainActivity" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="jp.danball.eartheditor.WebActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>
